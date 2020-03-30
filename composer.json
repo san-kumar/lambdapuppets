@@ -1,0 +1,18 @@
+{
+  "name": "lambdapuppets/lambdapuppets",
+  "description": "Little Lambda Puppets (LLP) are self-contained instances of [puppeteer](https://developers.google.com/web/tools/puppeteer) that run on AWS lambda (and have a life of their own).",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "San Kumar",
+      "email": "lambdaphp@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "ext-zip": "*",
+    "lambdapuppets/installer": "*"
+  },
+  "minimum-stability": "dev"
+}
