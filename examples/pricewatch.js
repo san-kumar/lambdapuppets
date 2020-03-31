@@ -10,7 +10,7 @@ module.exports.run = async (browser, event) => {
     if (price < 800)
         return 'Hey the price has dropped to ' + price; //this msg will be sent to you via telegram, email and a URL will also be pinged (as described in config below)
     else
-        return ''; //returning an empty string does no
+        return ''; //returning an empty string does not trigger pipes
 };
 
 module.exports.config = {
