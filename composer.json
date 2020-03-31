@@ -14,5 +14,11 @@
     "ext-zip": "*",
     "lambdapuppets/installer": "*"
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "./../lambdapuppets-installer"
+    }
+  ],
   "minimum-stability": "dev"
 }
