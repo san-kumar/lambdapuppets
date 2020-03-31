@@ -1,16 +1,23 @@
 # Little Lambda Puppets (LLP)
 
-Little Lambda Puppets (LLP) are self-contained instances of [puppeteer](https://developers.google.com/web/tools/puppeteer) 
-that run on AWS lambda (and have a life of their own). 
+Little Lambda Puppets (LLP) are Puppeteer scripts that run on AWS lambda (and kinda have a life of their own). 
 
-## What can LLPs do?
+Basically you write a small [Puppeteer](https://developers.google.com/web/tools/puppeteer) script and LLP takes 
+care of the rest. This includes deploying it to AWS lambda, adding an API gateway to invoke it with a GET request 
+or turning it into a CRON job that runs your puppeteer script every "X" minutes. 
 
-Here are just a few examples:
+LLP can also notify you of what your puppets are doing by sending you alerts via email, telegram, or URL ping.   
+
+All this with just a single command: `llp deploy`. No messy configuration. It's all done for you (batteries included).
+
+## What can LLPs do for me?
+
+Here are just a few real-life examples:
  
-- Check your website every 5 minutes (and email or [telegram](https://telegram.org/) you if something looks off)
-- Watch the price of your favorite product and email you when it changes.
-- Login to a website and return the HTML of member's area via a simple GET request.
-- Scrape a website and ping a URL with fresh data automatically at every X minutes.
+- Check your website every 5 minutes (and email or [telegram](https://telegram.org/) you if something looks broken)
+- Watch the price of your favorite product and alert you when it changes.
+- Go to a website, fill a form and return results via a simple GET request.
+- Feed your database with fresh data by automatically scraping a website every X minutes.
 - Take a screenshot of a website and return it as jpg or pdf file with a simple GET request.
 - And much much more!  
 
