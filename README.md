@@ -215,6 +215,10 @@ This was just a weekend project for my own amusement but I will definitely add m
 - Leave me some feedback on this [HN thread](https://news.ycombinator.com/item?id=22741040) (please use *Issues* for bugs only).
 - Contribute and send me PRs because isn't that what OSS is all about? :)
 
+## Credits
+
+This project uses [chrome-aws-lambda](https://github.com/alixaxel/chrome-aws-lambda) behind the scenes to create the headless browser on AWS lambda.
+
 ## License
 
 The software is licensed using a GPL License. It means you can do whatever you want with it (including using it for commercial purposes freely), as long as you include the original copyright and license notice in any copy of the software/source.
