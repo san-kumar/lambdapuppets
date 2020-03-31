@@ -5,12 +5,16 @@ that run on AWS lambda (and have a life of their own).
 
 ## What can LLPs do?
 
-- Check your website every 5 minutes (and [telegram](https://telegram.org/) you if something looks off)
+Here are just a few examples:
+ 
+- Check your website every 5 minutes (and email or [telegram](https://telegram.org/) you if something looks off)
 - Watch the price of your favorite product and email you when it changes.
-- Login to a website and return the HTML using a simple GET request.
-- Scrape a website every X minutes and ping some URL with fresh data.
+- Login to a website and return the HTML of member's area via a simple GET request.
+- Scrape a website and ping a URL with fresh data automatically at every X minutes.
+- Take a screenshot of a website and return it as jpg or pdf file with a simple GET request.
+- And much much more!  
 
-Best part is that it's [100% free](#cost) and if used reasonably doesn't cost you a single dime!
+Best part is that it's [100% free](#cost), requires no servers (it's serverless!) and if used reasonably it doesn't cost you a single dime!
 
 ## Installation
 
@@ -47,26 +51,29 @@ via its URL (as shown after deployment).
    This puppet checks a website every "X" minutes and send you a [telegram](https://telegram.org/) if something feels off.
    You can also configure it to send an email or ping a URL instead. 
      
-   [source](#) 
+   [source](examples/uptime.js) 
 
  - **Price watch puppet**
 
    This puppet checks the price of product every "X" minutes and notifies you if it changes (telegram, email, ping, sms, etc)
      
-   [source](#) 
+   [source](examples/pricewatch.js)
    
  - **Scraper puppet**
 
-   This puppet scrapes the data off a web page and returns it as CSV (comma separated values). 
-   It does not run automatically but have to manually invoke it using a GET request (the URL that's shown after [deployment](#installation)). 
+   This puppet does a search on DuckDuckGo for "chrome puppeteer" and returns the github link. 
+   
+   This puppet does not run automatically but you invoke it using a GET request (the URL that's shown after [deployment](#installation)). 
      
-   [source](#) 
+   [source](examples/scraper.js)
    
 - **Screenshot puppet**
 
-   This puppet turns a webpage into a pdf or jpeg file.  It does not run automatically but have to manually invoke it using a GET request (the URL that's shown after [deployment](#installation)).
+   This puppet turns a webpage into a pdf or png file. 
+    
+   This puppet can be invoked via a GET request (the URL that's shown after [deployment](#installation)).
         
-   [source](#) 
+   [source](examples/screenshot.js)
 
 ## Scripting
 
