@@ -13,7 +13,7 @@ You just write your puppeteer scripts like before, then just type a single comma
 
  `llp deploy` - And that's all it takes to make them serverless!
 
-## Why I need this?
+## What LLP can do for you
 
 Here are just a few real-life examples of what an LLP can do:
  
