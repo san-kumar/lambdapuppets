@@ -1,7 +1,6 @@
 # Little Lambda Puppets (LLP)
 
-Little Lambda Puppets (LLP) help you to deploy your [Puppeteer](https://developers.google.com/web/tools/puppeteer) scripts
-to AWS lambda and run them using a URL or CRON job.
+Deploy your [Puppeteer](https://developers.google.com/web/tools/puppeteer) scripts to AWS lambda and run them using a URL or CRON job.
 
 LLP takes care of the everything including setting up the chromium binary on AWS lambda,
 creating lambda functions, adding an API gateway to invoke your functions with a GET request 
@@ -201,16 +200,16 @@ It is possible to send SMS / phone call too but it may require custom integratio
 
 ## Supported browsers
 
-LLP supports two type of browsers:
+LLP supports these browsers:
 - Chromium browser (default)  
 - [Zombie browser](http://zombie.js.org/) (light weight nodejs browser)
-- No browser (if all you need is node.js `request`)
+- No browser (if all you need is the node.js `request` module)
 
 It can be specified in your module configuration like this:
 
 ````javascript
 module.exports.config = {
-    browser: 'zombie',
+    browser: 'zombie', //none, chromium
 }
 ````
 
