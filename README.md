@@ -1,31 +1,37 @@
 # Little Lambda Puppets (LLP)
 
-Little Lambda Puppets (LLP) are Puppeteer scripts that run on AWS lambda (and kinda have a life of their own). 
+Little Lambda Puppets (LLP) help you to deploy your [Puppeteer](https://developers.google.com/web/tools/puppeteer) scripts
+to AWS lambda and run them using a URL or CRON job.
 
-Basically you write a small [Puppeteer](https://developers.google.com/web/tools/puppeteer) script and LLP takes 
-care of the rest. This includes deploying it to AWS lambda, adding an API gateway to invoke it with a GET request 
-or turning it into a CRON job that runs your puppeteer script every "X" minutes. 
+LLP takes care of the everything including setting up the chromium binary on AWS lambda,
+creating lambda functions, adding an API gateway to invoke your functions with a GET request 
+or adding CRON jobs (via AWS cloudwatch) to run your puppets every "X" minutes. 
 
-LLP can also notify you of what your puppets are doing by sending you alerts via email, telegram, or URL ping.   
+LLP also monitors and notifies you of what your puppets are doing and it can send you alerts via email, telegram, or a simple URL ping.   
 
-All this with just a single command: `llp deploy`. No messy configuration. It's all done for you (batteries included).
+Best part is there are no handlers to write or messy configuration files to maintain. 
+You just write your puppeteer scripts like before, then just type a single command:
 
-## What can LLPs do for me?
+ `llp deploy` - And that's all it takes to make them serverless!
 
-Here are just a few real-life examples:
+## Why I need this?
+
+Here are just a few real-life examples of what an LLP can do:
  
-- Check your website every 5 minutes (and email or [telegram](https://telegram.org/) you if something looks broken)
-- Watch the price of your favorite product and alert you when it changes.
-- Go to a website, fill a form and return results via a simple GET request.
-- Feed your database with fresh data by automatically scraping a website every X minutes.
-- Take a screenshot of a website and return it as jpg or pdf file with a simple GET request.
+- Check your website every 5 minutes (and alert you via email or [telegram](https://telegram.org/) you if it's down or broken)
+- Monitor the price of your favorite product on Amazon and alert you when it changes in real-time.
+- Go to a website, fill a form and return results via a simple ajax request.
+- Feed your database with fresh data automatically by scraping some website every X minutes.
+- Create a screenshot of a website in jpg or pdf using a simple ajax request.
 - And much much more!  
 
-Best part is that it's [100% free](#cost), requires no servers (it's serverless!) and if used reasonably it doesn't cost you a single dime!
+**It's [100% free](#cost)**, requires no servers (it's serverless!) and if used reasonably it doesn't cost you a single dime!
 
 ## Installation
 
-Installation is simple. All you need is PHP 7+ with **[composer](https://getcomposer.org)**
+Installation is simple. All you need is PHP 7+ with **[composer](https://getcomposer.org)**.
+
+![Screen recording](examples/howto.gif)
 
 To install, just type this on your command line (terminal)
 
