@@ -199,6 +199,32 @@ The puppet will make a POST request to a *URL* (with the output as request body)
 
 It is possible to send SMS / phone call too but it may require custom integration via [twilio](https://www.twilio.com). 
 
+## Supported browsers
+
+LLP supports two type of browsers:
+- Chromium browser (default)  
+- [Zombie browser](http://zombie.js.org/) (light weight nodejs browser)
+- No browser (if all you need is node.js `request`)
+
+It can be specified in your module configuration like this:
+
+````javascript
+module.exports.config = {
+    browser: 'zombie',
+}
+````
+
+## Configuration
+
+By default LLP allocates 512MB ram with 3 minute timeout for your puppets. To change this, just edit `lambdapuppets.ini` and put custom values in the `default` section 
+like this:
+
+````ini
+[default]
+ram=1024M
+timeout=120
+````
+
 ## Removing puppets
 
 To disable an active puppet, just make `enabled=false` in `lambdapuppets.ini` for that puppet. 
