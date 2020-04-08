@@ -237,6 +237,11 @@ llp remove --verbose
 ## Cost
 
 It's free and open-source. In addition to that AWS lambda also gives you 1 million free requests per month and 400,000 GB-seconds of compute time per month ([details here](https://aws.amazon.com/lambda/pricing/)). So it's virtually free for some lightweight puppeteering. 
+
+## How to guides
+
+- If you're new to Puppeteer, try these two tutorials: [tutorial #1](https://nitayneeman.com/posts/getting-to-know-puppeteer-using-practical-examples/), [tutorial #2](https://itnext.io/puppeteer-or-how-i-learned-to-stop-worrying-and-love-the-automation-92e96f4901e7?gi=5ac00b61b32c).
+- Check out these [examples](examples) directory for some real-world use cases.
    
 ## Need more features?
 
