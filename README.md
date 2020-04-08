@@ -248,7 +248,7 @@ It's free and open-source. In addition to that AWS lambda also gives you 1 milli
 This was just a weekend project for my own amusement but I will definitely add more features soon.
 
 - Please [star this project](https://github.com/san-kumar/lambdapuppets) to show your interest.
-- Leave me some feedback on this [HN thread](https://news.ycombinator.com/item?id=22741040) (please use *Issues* for bugs only).
+- Leave me some feedback on this [HN thread](https://news.ycombinator.com/item?id=22751505) (please use *Issues* for bugs only).
 - Contribute and send me PRs because isn't that what OSS is all about? :)
 
 ## Credits
