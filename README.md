@@ -224,6 +224,33 @@ ram=1024M
 timeout=120
 ````
 
+You can also add a special `[env]` section in  `lambdapuppets.ini` and define variables that will be available inside your scripts like this:
+
+````ini
+[env]
+apikey=sdfsdfsdfsdfsd
+apikey2=XXXXXX
+````
+
+Then use it inside your script like this:
+
+````javascript
+module.exports.run = async (browser, event) => {
+    console.log("env: ", JSON.stringify(event.env), event.env.apikey);
+}
+````
+
+## Special functions
+
+There are also a few utility functions available *globally* inside your script to
+make your life easier:
+
+- `llp_fetch(url, 'GET/POST', {data})`: wrapper function to fetch or ping data from any URL. 
+- `llp_email(from, to, subject, htmlBody)`: wrapper function to send an email (`to` email must be verified in Amazon SES).   
+- `llp_screenshot()`: Takes the screenshot of browser and uploads it to imgur. 
+Then return the URL to uploaded image. To use it just do `let imgur_url = await llp_screenshot();` inside your scripts. Very useful
+for sending screenshots to telegram , email, etc.
+
 ## Removing puppets
 
 To disable an active puppet, just make `enabled=false` in `lambdapuppets.ini` for that puppet. 
