@@ -240,16 +240,16 @@ module.exports.run = async (browser, event) => {
 }
 ````
 
-## Special functions
+## Utility functions
 
 There are also a few utility functions available *globally* inside your script to
 make your life easier:
 
-- `llp_fetch(url, 'GET/POST', {data})`: wrapper function to fetch or ping data from any URL. 
-- `llp_email(from, to, subject, htmlBody)`: wrapper function to send an email (`to` email must be verified in Amazon SES).   
-- `llp_screenshot()`: Takes the screenshot of browser and uploads it to imgur. 
-Then return the URL to uploaded image. To use it just do `let imgur_url = await llp_screenshot();` inside your scripts. Very useful
+- `llp_page(url)`: wrapper function to `await browser.newPage` (also initializes a few defaults like user-agent, view port, etc)
+- `llp_screenshot(page)`: Takes the screenshot of `page` and uploads it to imgur. Then returns the URL to uploaded image. To use it just do `let imgur_url = await llp_screenshot();` inside your scripts. Very useful
 for sending screenshots to telegram , email, etc.
+- `llp_upload(bucket, path, data)`: write data to a file in S3 bucket. 
+- `llp_email(from, to, subject, htmlBody)`: wrapper function to send an email (`to` email must be verified in Amazon SES).   
 
 ## Removing puppets
 
